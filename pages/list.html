@@ -1,0 +1,27 @@
+<a href="#!/students/add" class="right btn btn-primary">Thêm mới</a>
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Avatar</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in students">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td><img src="{{item.avatar}}" alt="" style="width: 150px; height: 100px"></td>
+        <td>{{item.status ? "Học đi" : "Học lại"}}</td>
+        <td>
+            <span><a href="#!/students/edit/{{item.id}}" class="btn btn-primary">Sửa</a></span>
+            <span><a href="#!/students/delete/{{item.id}}" class="btn btn-danger">Xóa</a></span>
+        </td>
+
+    </tr>
+    </tbody>
+</table>

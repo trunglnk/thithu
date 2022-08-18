@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 mb-4" ng-repeat="item in students">
+                <div class="candidate-list candidate-grid">
+                    <div class="candidate-list-image">
+                        <img class="img-fluid" src="{{item.avatar}}" alt="">
+                    </div>
+                    <div class="candidate-list-details">
+                        <div class="candidate-list-info">
+                            <div class="candidate-list-title">
+                                <h5><a href="candidate-detail.html">Họ tên: {{item.name}}</a></h5>
+                            </div>
+                            <div class="candidate-list-option">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-filter pr-1"></i>Email: {{item.email}}</li>
+                                    <li><i class="fas fa-map-marker-alt pr-1"></i>Trạng thái: {{item.status ? "Học đi" : "Học lại"}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="candidate-list-favourite-time">
+                            <a class="candidate-list-favourite order-2" href="#"><i class="far fa-heart"></i></a>
+                            <span class="candidate-list-time order-1"><i class="far fa-clock pr-1"></i>1M ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
